@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Топ причин</title>
+  <style>
+    /* Основные стили */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Фоновые изображения */
+    header {
+      background: url('O2.jpg') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    main {
+      background: url('O1.jpg') no-repeat center center/cover;
+      padding: 20px;
+    }
+
+    .reason {
+      background: url('reason-background.jpg') no-repeat center center/cover;
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      color: white;
+    }
+
+    .reason img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .reason h3 {
+      margin: 10px 0;
+      font-size: 1.2em;
+    }
+
+    .reason p {
+      margin: 10px 0;
+      font-size: 1em;
+      color: #f0f0f0; /* Цвет текста описания */
+    }
+
+    /* Стиль символов матрицы */
+    .matrix-symbol {
+      position: absolute;
+      top: 0;
+      font-size: 14px;
+      color: #00ff00;
+      font-family: 'Courier New', Courier, monospace;
+      animation: fall linear infinite;
+      white-space: nowrap;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-100%);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Шапка -->
+  <header>
+  </header>
+
+  <!-- Главная часть -->
+  <main>
+    <!-- Структура причин -->
+    <div class="reason">
+        <h1>Топ причин почему Мирон пидор:</h1>
+      <h3>Причина 1</h3>
+      <img src="O3.jpg" alt="Причина 1">
+      <p>Кидала .</p>
+    </div>
+
+    <div class="reason">
+      <h3>Причина 2</h3>
+      <img src="O8.jpg" alt="Причина 2">
+      <p>Просто так.</p>
+    </div>
+
+    <div class="reason">
+      <h3>Причина 3</h3>
+      <img src="O7.jpg" alt="Причина 3">
+      <p>Не хотел давать адрес.Уебан.
+      ФИО: Носов Мирон Станиславович.
+      Адрес: Кожамкулова 117, 1 подъезд, 8 этаж
+      Номер:+7 700 216 3117
+      Вк:@vosonnorim</p>
+    </div>
+
+    <div class="reason">
+      <h3>Причина 4</h3>
+      <img src="O4.jpg" alt="Причина 4">
+      <p>Поменял нас на класс фашистов (кидала х2)</p>
+    </div>
+
+    <div class="reason">
+      <h3>Причина 5</h3>
+      <img src="O5.jpg" alt="Причина 5">
+      <p>Люблю твою маму.</p>
+    </div>
+    <div class="reason">
+      <h3>Причина 6</h3>
+      <img src="O9.jpg" alt="Причина 2">
+      <p>Бросил Султана Сулейменова</p>
+    </div>
+    <div class="reason">
+      <h3>Причина 7</h3>
+      <img src="O6.jpg" alt="Причина 6">
+      <p>Мы следим за тобой. Ничтожество.</p>
+    </div>
+  </main>
+</body>
+  <script>
+    // Функция для создания символа матрицы
+    function createMatrixSymbol() {
+      const symbol = document.createElement('div');
+      symbol.className = 'matrix-symbol';
+
+      // Устанавливаем случайное положение символа по горизонтали
+      symbol.style.left = Math.random() * 100 + 'vw';
+      symbol.style.animationDuration = Math.random() * 2 + 2 + 's';
+
+      // Генерация случайного символа (0 или 1)
+      symbol.textContent = Math.random() > 0.5 ? '1' : '0';
+
+      document.body.appendChild(symbol);
+
+      // Удаляем символ после завершения анимации
+      setTimeout(() => {
+        symbol.remove();
+      }, 4000);
+    }
+
+    // Функция для массового создания символов
+    function generateMatrixSymbols() {
+      const numberOfSymbols = 50; // Количество символов на один скролл
+      for (let i = 0; i < numberOfSymbols; i++) {
+        createMatrixSymbol();
+      }
+    }
+
+    // Добавление событий прокрутки
+    let lastScrollTop = 0; // Переменная для отслеживания направления прокрутки
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if (Math.abs(scrollTop - lastScrollTop) > 10) {
+        // Генерировать символы только при значительном изменении прокрутки
+        generateMatrixSymbols();
+        lastScrollTop = scrollTop;
+      }
+    });
+  </script>  <script>
+    // Функция для создания символа матрицы
+    function createMatrixSymbol() {
+      const symbol = document.createElement('div');
+      symbol.className = 'matrix-symbol';
+
+      // Устанавливаем случайное положение символа по горизонтали
+      symbol.style.left = Math.random() * 100 + 'vw';
+      symbol.style.animationDuration = Math.random() * 2 + 2 + 's';
+
+      // Генерация случайного символа (0 или 1)
+      symbol.textContent = Math.random() > 0.5 ? '1' : '0';
+
+      document.body.appendChild(symbol);
+
+      // Удаляем символ после завершения анимации
+      setTimeout(() => {
+        symbol.remove();
+      }, 4000);
+    }
+
+    // Функция для массового создания символов
+    function generateMatrixSymbols() {
+      const numberOfSymbols = 50; // Количество символов на один скролл
+      for (let i = 0; i < numberOfSymbols; i++) {
+        createMatrixSymbol();
+      }
+    }
+
+    // Добавление событий прокрутки
+    let lastScrollTop = 0; // Переменная для отслеживания направления прокрутки
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if (Math.abs(scrollTop - lastScrollTop) > 10) {
+        // Генерировать символы только при значительном изменении прокрутки
+        generateMatrixSymbols();
+        lastScrollTop = scrollTop;
+      }
+    });
+  </script>
+</html>>
